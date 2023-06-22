@@ -1,8 +1,4 @@
-from datetime import datetime
-import base64
-
 import requests
-from requests.auth import HTTPBasicAuth
 import simplejson as json
 
 from access_token import generate_access_token
