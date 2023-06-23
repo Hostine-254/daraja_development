@@ -23,16 +23,3 @@ def register_url():
     #print(response.text.encode('utf8'))
 
 register_url()
-
-headers = {
-    'Content-Type': 'application/json',
-    'Authorization': 'Bearer %s' % my_access_token
-    }
-
-payload = {
-        "To":keys.phone_number,
-        "Message": "We have received your request snd its being proccessed",
-    }
-
-response = requests.request("POST", 'https://api.safaricom.co.ke/mpesa/sms/v1/send', headers = headers, data = json.dumps(payload))
-print(response.text.encode('utf8'))
